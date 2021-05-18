@@ -1,0 +1,20 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans);
+
+.p {
+  font-family: "Noto Sans";
+}
+
+.table {
+  border-collapse: collapse;
+  font-family: "Noto Sans";
+}
+
+.button {
+  background-color: rgb(190, 190, 190);
+  border: none;
+  border-radius: 15px;
+  padding: 5px;
+  font-family: "Noto Sans";
+  text-align: center;
+  font-size: 16px;
+}

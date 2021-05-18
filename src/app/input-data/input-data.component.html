@@ -1,12 +1,20 @@
-<div>
-  <label for="authorInput">Author: </label>
-  <input type="text" id="authorInput" [formControl]="postAuthor" />
+<div class="containerDiv">
+  <label for="authorInput" class="label">Author: </label>
+  <input class="in" type="text" id="authorInput" [formControl]="postAuthor" />
 </div>
-<div>
-  <label for="titleInput">Title: </label>
-  <input type="text" id="titleInput" [formControl]="postTitle" />
+<div class="containerDiv">
+  <label for="titleInput" class="label">Title: </label>
+  <input class="in" type="text" id="titleInput" [formControl]="postTitle" />
 </div>
-<p>{{ getStatus() }}</p>
-<button (click)="sendData()" [disabled]="!postTitle.valid || !postAuthor.valid">
+<p class="p">Post success: {{ getStatus() }}</p>
+<p class="p">
+  If status is fasle after you submit try updating table to sync with the
+  database on your end
+</p>
+<button
+  class="button"
+  (click)="sendData()"
+  [disabled]="!postTitle.valid || !postAuthor.valid"
+>
   Send post!
 </button>

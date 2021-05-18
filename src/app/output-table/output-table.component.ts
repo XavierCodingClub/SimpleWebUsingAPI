@@ -32,11 +32,24 @@ export class OutputTableComponent implements OnInit {
     this.api
       .getPosts()
       .subscribe((data: { id: number; title: string; author: string }[]) => {
+        const row = this.table.insertRow();
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+        const cell3 = row.insertCell(2);
+        cell1.setAttribute('style', 'border: 1px solid black;');
+        cell2.setAttribute('style', 'border: 1px solid black;');
+        cell3.setAttribute('style', 'border: 1px solid black;');
+        cell1.innerHTML = 'id';
+        cell2.innerHTML = 'title';
+        cell3.innerHTML = 'author';
         for (let i = 0; i < data.length; i++) {
           const row = this.table.insertRow();
           const cell1 = row.insertCell(0);
           const cell2 = row.insertCell(1);
           const cell3 = row.insertCell(2);
+          cell1.setAttribute('style', 'border: 1px solid black;');
+          cell2.setAttribute('style', 'border: 1px solid black;');
+          cell3.setAttribute('style', 'border: 1px solid black;');
           cell1.innerHTML = this.posts[i].id.toString();
           cell2.innerHTML = this.posts[i].title;
           cell3.innerHTML = this.posts[i].author;

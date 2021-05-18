@@ -21,7 +21,7 @@ export class InputDataComponent implements OnInit {
     });
   }
   getStatus() {
-    return JSON.stringify(this.status);
+    return JSON.stringify(this.status.success);
   }
   ngOnInit(): void {}
 }

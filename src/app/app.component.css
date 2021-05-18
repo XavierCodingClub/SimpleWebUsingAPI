@@ -1,0 +1,14 @@
+.out {
+  margin: 10px;
+  display: block;
+  background: lightgray;
+  border-radius: 15px;
+  padding: 15px;
+}
+.in {
+  margin: 10px;
+  display: block;
+  background: lightgray;
+  border-radius: 15px;
+  padding: 15px;
+}
