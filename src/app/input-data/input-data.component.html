@@ -1,0 +1,12 @@
+<div>
+  <label for="authorInput">Author: </label>
+  <input type="text" id="authorInput" [formControl]="postAuthor" />
+</div>
+<div>
+  <label for="titleInput">Title: </label>
+  <input type="text" id="titleInput" [formControl]="postTitle" />
+</div>
+<p>{{ getStatus() }}</p>
+<button (click)="sendData()" [disabled]="!postTitle.valid || !postAuthor.valid">
+  Send post!
+</button>
